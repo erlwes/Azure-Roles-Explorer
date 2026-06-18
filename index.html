@@ -2,37 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Azure Roles Explorer</title>
 
 <link rel="stylesheet" href="styles.css" />
-</head>
-
+</head>    
 <body>
 
-<h2>Azure Roles Explorer</h2>
-<p>A tool for reverse lookups of actions vs. roles</p>
-
-<div id="modeHeader"></div>
-
-<div>
-    <label><input type="radio" name="mode" value="role" checked> Role search</label>
-    <label style="margin-left:20px;"><input type="radio" name="mode" value="action"> Action search</label>
+<div class="hero">
+    
+    <h1>Azure Roles Explorer</h1>
+    
+    <p class="subtitle">
+        Cross lookup of Azure roles and actions
+    </p>
+    
+    <div class="directionBar">
+        <span id="leftLabel">Roles</span>
+        <button id="swapBtn" class="swapBtn">
+            ⇄
+        </button>
+        <span id="rightLabel">Actions</span>
+    </div>
+    
+    <div class="searchWrapper">
+        <span class="searchIcon">🔍</span>
+        <input
+            id="search"
+            type="text"
+            placeholder="Search Azure roles..."
+            autocomplete="off"
+        />
+    </div>
+    
 </div>
-
-<div class="toolbar">
-    <input id="search" type="text" placeholder="Search roles or actions..." />
-</div>
-
 <div class="container">
+
     <div class="panel">
-        <h3>Results</h3>
+        <h3 id="resultsTitle">Roles</h3>
         <div id="results"></div>
     </div>
 
-    <div class="panel">
-        <h3>Details</h3>
-        <div id="details">Select a result...</div>
+    <div class="relationshipArrow">
+        →
     </div>
+
+    <div class="panel">
+        <h3 id="detailsTitle">Actions</h3>
+        <div id="details">           
+        </div>
+    </div>
+    
 </div>
 
 <script src="app.js"></script>
