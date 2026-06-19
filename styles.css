@@ -174,28 +174,22 @@ body {
 .swapBtn {
     width: 52px;
     height: 52px;
-
-    display: flex;
+    
     align-items: center;
     justify-content: center;
+    border: none;
+    
+    color: var(--text);    
+    background: transparent;
 
-    border-radius: 999px;
-
-    border: 1px solid var(--border);
-
-    background: #182031;
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 22px;
+    font-size: 36px;
+    font-weight: 800;
 
     transition: 0.15s;
 }
 
 .swapBtn:hover {
-    background: #24314d;
-    border-color: var(--blue);
+    color: var(--blue);    
 }
 
 /* =========================
