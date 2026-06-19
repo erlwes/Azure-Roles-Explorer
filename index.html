@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Azure Roles Explorer</title>
-
 <link rel="stylesheet" href="styles.css" />
-</head>    
-<body>
+</head>
 
+<body>
+    
 <div class="hero">
-    
+
+    <!-- TITLE -->
     <h1>Azure Roles Explorer</h1>
-    
+
+    <!-- SUBTITLE -->
     <p class="subtitle">
         Cross lookup of Azure roles and actions
     </p>
-    
-    <div class="directionBar">
-        <span id="leftLabel">Roles</span>
-        <button id="swapBtn" class="swapBtn">
-            ⇄
-        </button>
-        <span id="rightLabel">Actions</span>
-    </div>
-    
+
+    <!-- SEARCHBAR -->
     <div class="searchWrapper">
         <span class="searchIcon">🔍</span>
         <input
@@ -35,28 +30,47 @@
             autocomplete="off"
         />
     </div>
-    
+
+    <!-- EXAMPLES -->
+    <div id="examplesBar" class="examplesBar"></div>
+
 </div>
+
+<!-- PANEL TITLES -->
+<div class="panelHeaderRow">
+
+    <h3 id="resultsTitle">Roles</h3>
+
+    <button id="swapBtn" class="swapBtn">⇄</button>
+
+    <h3 id="detailsTitle">Actions</h3>
+
+</div>
+
+<!-- PANELS -->
 <div class="container">
 
     <div class="panel">
-        <h3 id="resultsTitle">Roles</h3>
         <div id="results"></div>
     </div>
 
-    <div class="relationshipArrow">
-        →
+    <div class="panel">
+        <div id="details"></div>
     </div>
 
-    <div class="panel">
-        <h3 id="detailsTitle">Actions</h3>
-        <div id="details">           
-        </div>
-    </div>
-    
 </div>
 
+<!-- JS -->
 <script src="app.js"></script>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <a href="https://github.com/erlwes/Azure-Roles-Explorer"
+       target="_blank"
+       rel="noopener noreferrer">
+        GitHub-project
+    </a>
+</footer>
 
 </body>
 </html>
